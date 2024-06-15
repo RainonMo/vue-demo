@@ -90,26 +90,11 @@ export async function listPostVoByPageUsingPost(
 }
 
 /** listMyPostVOByPage POST /api/post/my/list/page/vo */
-export async function listMyPostVoByPageUsingPost1(
+export async function listMyPostVoByPageUsingPost(
   body: API.PostQueryRequest,
   options?: { [key: string]: any },
 ) {
   return request<API.BaseResponsePagePostVO_>('/api/post/my/list/page/vo', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    data: body,
-    ...(options || {}),
-  });
-}
-
-/** searchPostVOByPage POST /api/post/search/page/vo */
-export async function searchPostVoByPageUsingPost(
-  body: API.PostQueryRequest,
-  options?: { [key: string]: any },
-) {
-  return request<API.BaseResponsePagePostVO_>('/api/post/search/page/vo', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
